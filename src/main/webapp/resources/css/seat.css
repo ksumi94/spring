@@ -1,0 +1,77 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li,ol,ul{list-style: none;}
+a{text-decoration: none;}
+
+
+.header{}
+.inner{
+  width: 1100px;
+  margin: 0 auto;
+  justify-content: center; align-items: center;}
+.content{display: flex; justify-content: flex-end; align-items: center;}
+.inner .nav-content{justify-content: flex-end; align-items: flex-end;}
+.nav-inner div{margin-left: 6px;}
+.nav-inner div button{border-radius: 5px; padding: 2px; font-size: 14px;}
+
+.select-space .select-title{margin-top: 20px;}
+.select-space .select-title h3{text-align: center; font-size: 28px;}
+
+.select-space .select-box{width: 100%; padding: 17px 0 3px;}
+.select-box .select-seat-number{width: 460px;}
+.select-seat .select-seat-age{width: 20%;}
+
+.select-seat{position: relative;}
+.select-seat .people-max{position: absolute; right: 10%; top: 0; font-size: 13px; color: red;}
+
+.select-seat-number .select-seat-ul{margin: 0; padding-bottom: 5px;}
+.select-seat-number .select-seat-ul .select-number{margin-right: 6px; padding: 2px 4px;}
+.select-seat-number{
+  border-right: 0.1px solid rgb(109, 106, 106);
+}
+.select-seat-ul-normal button.selected {
+    background-color: #3498db;
+    color: #fff;
+}
+.select-seat-ul-teen button.selected {
+    background-color: #3498db;
+    color: #fff;
+}
+.select-seat-ul-old button.selected {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.select-box .movie-info{width: 532px; padding-left: 10px;}
+.movie-info .theater-info{width: 100%; margin: 0 0 5px ;}
+.select-theater-place{width: 20%;}
+.theater-info span{font-size: 13px;}
+.playYMD p{font-size: 22px; font-weight: 700;}
+
+.seat-wrapper{ display: flex; justify-content:  center; align-items: center; height: 500px;}
+.screen{text-align: center;}
+.seat-box{padding: 20px 20px;  height: 400px;}
+.seat-box div .seat, .hidden-seat{padding: 2px 5px; font-size: 10px; width: 40px;margin-left: 1px;}
+.hidden-seat{visibility: hidden;}
+.seat .clicked { background-color: #3498db; color: #fff;}
+
+
+.right img{border-radius: 15px;}
+.left img{border-radius: 15px;}
+
+.popup-wrap {display: flex; justify-content: center;}
+.popup-wrap .info-theater{font-size: 12px; text-align: left;}
+.popup-wrap .inner{ justify-content: center; align-items: center; display: flex;}
+.info-theater .screen span{width: 100%;}
+.left{margin: 0;}
+
+.info-movie{font-size: 12px;}
+.info-movie .movie-title{margin-bottom: 20px;}
+.info-movie .movie-type p{margin: 0;}
+
+.info-seat{}
+
+.info-money {font-size: 12px; display: flex; flex-direction: column;}
+.info-money .allMoney {font-size: 14px; color: red;}
+
+/* .movie-wrap{justify-content: space-around;} */
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m">
+	   <insert id="movie_insert" parameterType="movie">
+      insert into movie_info values(
+         SEQ_IDX_MOVIE_INFO.NEXTVAL,
+         #{subject},
+         #{director},
+         #{actor},
+         #{category},
+         #{age},
+         #{runtime},
+         #{open_date},
+         #{detail_text},
+         #{subject_full_name}
+      )
+   </insert>
+   <select id="movieInfo" resultType="movie">
+   	select * from movie_info
+   </select>
+   
+   <select id="movie_one" parameterType="int" resultType="movie">
+      select * from movie_info where idx=#{idx}
+   </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

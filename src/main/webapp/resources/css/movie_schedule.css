@@ -1,0 +1,208 @@
+@charset "UTF-8";
+ol, ul, li{list-style: none;}
+.movie_list img{
+	width: 20px;
+	height: 20px;
+}
+
+.box{border: 1px solid gray;}
+
+.inner{
+  width: 996px;
+  margin: 0 auto;
+  justify-content: center; align-items: center;}
+  .content{display: flex; justify-content: flex-end; align-items: center; padding: 50px 0;}
+.inner .nav-content{justify-content: flex-end; align-items: flex-end;}
+.nav-inner div{margin-left: 6px;}
+.nav-inner div button{border-radius: 5px; padding: 2px; font-size: 14px;}
+
+.clicked{background-color: yellow;}
+
+.steps{
+	height: 600;
+	position: relative;
+	display: flex;
+	border: 2px solid black;
+	background-color: #F2F0E4;
+}
+
+.select-movie{
+	width: 284px;
+}
+.select-theater{
+	width: 284px;
+}
+.select-date{
+	width: 90px;
+}
+.select-time{
+	width: 345px;
+}
+
+.col-head{
+	text-align: center;
+   	background-color: gray;
+   	margin: 2px;
+}
+.col-body{
+	height: 565px;
+	margin: 2px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.movie_menu ul{
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+.movie_menu li{
+	float:left;
+	border-right: 2px solid gray;
+	border-top : 2px solid gray;
+	border-bottom : 2px solid gray;
+	padding-left: 11px;
+	padding-right: 11px;
+}
+
+/* 영화 선택 */
+
+.movie_list {
+		/* overflow: scroll;  가로 스크롤*/ 
+    max-height: 500px; /* 스크롤이 보일 최대 높이를 지정하세요 */
+    overflow-y: auto; /* 세로 스크롤을 만듭니다. */
+  
+}
+
+.movie_list .list{
+	list-style: none;
+	padding: 0 0;
+}
+
+.movie_list li{
+  padding: 0;
+  margin: 5px;
+}
+
+.movie_list > ul > li > a span.text{
+	padding-left : 10px;
+	color: #333;
+   	font-weight: bold;
+}
+
+.movie_list img{
+	width: 20px;
+	height: 20px;
+	margin: 0 6px;
+}
+
+
+.movie_menu > li:hover .movie_menu_depth{display:block;}
+
+.movie_menu .movie_menu_depth {display:none;
+						position:absolute;
+						left:10;}
+.movie_menu .movie_menu_depth a{display: block;
+						padding: 5px; }
+.theater_menu ul{
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+.theater_menu li{
+	
+	float:left;
+	border-right: 2px solid gray;
+	border-top : 2px solid gray;
+	border-bottom : 2px solid gray;
+	padding-left: 11px;
+	padding-right: 11px;
+}
+
+
+/* 영화관 선택 */
+.question-list ul {
+      padding: 0;
+    }
+.question-list ul >li {
+  color: black;
+}
+    .sec {
+    }
+    .sec .question-list {
+      width: 100%;
+      padding: 20px 20px;
+			margin: 0 0;
+    }
+    .sec .question-list > li {
+      width: 100%;
+      /* margin: 0 0 30px; */
+      margin: 0;
+    }
+    .sec .question-list li .question {
+      padding: 0;
+      font: bold 24px "inherit";
+			width: 30%;
+    }
+    .sec .question-list li .answer {
+      /*background-color: yellow;*/
+      font-size: 18px;
+      line-height: 1.5;
+      transition: 0;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      margin-bottom: 30px;
+      /* padding: 0 30px; */
+      padding: 0;
+		}
+    .sec .question-list li.view .answer {
+      height: 100%;
+    }
+    .sec .question-list .list{
+		display: flex;
+	}
+	.city-box{}
+	.question-list{position: relative; }
+	.answer{
+		position: absolute;
+		left: 40%;
+		top: 10%;
+		max-width: 100px;
+	}
+	.answer ul{width: 150px; max-height: 550px; overflow-y: auto;}
+	.answer ul li{width: 100px;}
+	.answer ul li a{font-size: 12px; font-weight: 700;}
+
+
+		/* 달력 */
+	.col-body{margin: 19px 0 0 7px;}
+	.col-body .calendar .contens{margin: 0 0; padding: 0 0;}
+	.col-body .day-box{
+		margin: 2px; width: 60px; height: 35px;
+	}
+	.col-body .dimmed{display: flex; flex-direction: column; align-items: center;}
+	.dimmed .month{width: 64; height: 30; font-size: 30px; font-weight: 700; margin-bottom: 10px;}
+	.calendar{max-height: 500px; overflow-y: auto;}
+	
+	.choose-movie{
+	padding: 30px 0;
+	}
+	
+	.right img {border-radius: 15px;}
+	
+	#movie-poster{width: 100px;}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

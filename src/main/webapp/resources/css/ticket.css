@@ -1,0 +1,58 @@
+ol, ul, li{list-style: none;}
+
+.steps{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.select-movie{
+	width: 283px;
+}
+.select-theater{
+	width: 283px;
+}
+.select-date{
+	width: 100px;
+}
+.select-time{
+	width: 283px;
+}
+
+.movie_list img{
+	width: 20px;
+	height: 20px;
+}
+
+.question-list ul {
+      padding: 0;
+    }
+    .sec {
+    }
+    .sec .question-list {
+      width: 100%;
+    }
+    .sec .question-list > li {
+      width: 100%;
+      /* margin: 0 0 30px; */
+      margin: 0;
+    }
+    .sec .question-list li .question {
+      padding: 0;
+      font: bold 24px "inherit";
+    }
+    .sec .question-list li .answer {
+      /*background-color: yellow;*/
+      font-size: 18px;
+      line-height: 1.5;
+      transition: 0.3s;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      margin-bottom: 30px;
+      /* padding: 0 30px; */
+      padding: 0;
+    }
+    .sec .question-list li.view .answer {
+      height: 100%;
+    }

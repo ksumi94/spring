@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+/* 상단바 메뉴 */
+* {
+	margin: 0;
+}
+
+img {
+	width: 30%;
+}
+
+ul, li {
+	list-style: none;
+}
+
+#main a {
+	text-decoration: none;
+	color: #6E6E6E;
+}
+
+#container {
+	width: 100%;
+}
+
+#header {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	padding: 30px 0 0 0;
+	box-sizing: border-box;
+}
+
+#main {
+	float: left;
+}
+
+#content {
+	float: right;
+}
+
+#content>li {
+	float: left;
+	display: inline-block;
+	position: relative;
+}
+
+#content>li>a {
+	display: block;
+	position: relative;
+	padding-bottom: 19px;
+	width: 100px;
+	color: #6E6E6E;
+	text-align: center;
+	padding: 0 0 20px 0;
+	box-sizing: border-box;
+}
+
+#content>li>img {
+	width: 50px;
+	height: 50px;
+}
+
+#content>li>a>span {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	line-height: 1.462em;
+	white-space: nowrap;
+	transform: translate(-50%, 0);
+}
+
+/* ------------------------------------ */
+
+.footer .company-info ul {
+	display: flex;
+	font-size: 13px;
+	max-width: 1170px;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 23px 0;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.footer .company-info ul li a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.footer .conpany-address-wrap {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+.footer .container {
+	width: 1170px;
+}
+
+.buttonbox button {
+	padding: 5px 10px 5px;
+	border-radius: 20px;
+	background-color: #ffffff;
+}
+
+.question-list ul {
+	padding: 0;
+}
+
+.footer {
+	background-color: #211f1f;
+}
+
+.footer .question-list {
+	width: 100%;
+}
+
+.footer .question-list>li {
+	width: 100%;
+	/* margin: 0 0 30px; */
+	margin: 0;
+}
+
+.footer .question-list  .question {
+	padding: 0;
+	font: bold 24px "inherit";
+}
+
+.footer .question-list .answer {
+	/*background-color: yellow;*/
+	font-size: 18px;
+	line-height: 1.5;
+	transition: 0.3s;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	margin-bottom: 30px;
+	/* padding: 0 30px; */
+	padding: 0;
+}
+
+.footer .question-list li.view .answer {
+	height: 100%;
+}
+
+.address {
+	color: #ffffff;
+}
+
+.question {
+	color: #ffffff;
+}
+
+.question-list ul li {
+	color: #ffffff;
+}
+
+/* -------------------------------------- */
+
+.movieinfo{
+	width: 1170px;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.movieimg img{
+	width: 15%;
+}
+
+.boxcontent{
+	position: absolute;
+	top: 30px;
+	width: 800px;
+	right: 150px;
+	
+}
+
+.title strong{
+	font-size: 25px;
+}
+
+.title span{
+	font-size: 15px;
+}
+
+.title span img{
+	size: 10px;
+}
+
+.score img{
+	width: 15px;
+}
+
+.score{
+	border-bottom: 1px solid #d9d6c8;
+	padding-bottom: 10px;
+}
+
+.spec{
+	padding-top: 18px;
+}
+
+.like{
+	position: absolute;
+	border: 1px solid red;
+	width: 80px;
+	height: 40px;
+	background-color: red;
+	border-radius: 3px;
+	
+}
+
+.like a{
+	position: absolute;
+	text-decoration: none;
+    font-size: 15px;
+    left: 9px;
+    top: 7px;
+    color: white;
+}
+
+.moviestory{
+	border-top: 1px solid #d9d6c8;
+	position: relative;
+	margin: 0 auto;
+	width: 1170px;
+	
+}
+
+.story{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+

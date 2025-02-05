@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="s">
+	<select id="selectOne" resultType="selectSchedule" parameterType="int">
+		SELECT ml.IDX , MOVIE_DATE ,mi.SUBJECT , mi.IDX movie_idx ,movie_start, age,RUNTIME ,theater_name,location FROM MOVIE_LIST ml
+		JOIN MOVIE_INFO mi ON ml.MOVIE_IDX  = mi.IDX
+		JOIN THEATER_INFO ti ON ml.THEATER_IDX = ti.IDX
+		WHERE ml.idx = #{idx}
+	</select>
+	
+	
+	<select id="selectMovie" resultType="schedule" parameterType="java.util.HashMap">
+		SELECT DISTINCT mi.SUBJECT, ml.MOVIE_DATE, mi.IDX movie_idx, ti.IDX theater_idx
+		FROM MOVIE_LIST ml
+		JOIN MOVIE_INFO mi ON ml.MOVIE_IDX  = mi.IDX
+		JOIN THEATER_INFO ti ON ml.THEATER_IDX = ti.IDX
+		WHERE ml.THEATER_IDX = #{theater_idx} AND ml.MOVIE_DATE = #{date}
+		ORDER BY mi.IDX 
+	</select>
+	
+	
+	<select id="selectSchedule" resultType="schedule" parameterType="java.util.HashMap">
+		SELECT DISTINCT ml.IDX, ml.MOVIE_START , mi.SUBJECT, mi.IDX AS movie_idx,mi.CATEGORY ,mi.AGE,mi.RUNTIME  ,mi.OPEN_DATE , ti.THEATER_NAME ,ti.LOCATION 
+		FROM MOVIE_LIST ml
+		JOIN MOVIE_INFO mi ON ml.MOVIE_IDX  = mi.IDX
+		JOIN THEATER_INFO ti ON ml.THEATER_IDX = ti.IDX
+		WHERE ml.THEATER_IDX = #{idx} AND ml.MOVIE_DATE = #{date} AND ml.MOVIE_IDX = #{subject}
+		ORDER BY ml.IDX 
+	</select>
+	
+	<select id="movie_schedule" resultType="movieSchedule">
+		SELECT  * FROM MOVIE_LIST
+	</select>
+	
+	
+	<select id="movieSchedule" resultType="movieSchedule" parameterType="java.util.HashMap">
+		SELECT ml.*  FROM THEATER_INFO ti 
+		INNER JOIN MOVIE_LIST ml ON ti.idx = ml.THEATER_IDX
+		where ti.idx = #{theater} and ml.movie_idx = #{movie}
+	</select>
+	
+	<update id="updateIdx" parameterType="int">
+		UPDATE SEAT_INFO SET SEAT_ORDER = 1 WHERE idx=#{idx}
+	</update>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
