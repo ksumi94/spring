@@ -1,0 +1,25 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Logs
+logs/
+*.log
+
+# Target (Maven build files)
+target/
+*.war
+*.jar
+
+# Spring Boot properties (if using)
+*.yml
+*.properties
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
