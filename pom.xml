@@ -5,7 +5,7 @@
 	<groupId>com.korea</groupId>
 	<artifactId>cgv</artifactId>
 	<name>groupProject_cgv</name>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
 		<java-version>11</java-version>
