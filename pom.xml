@@ -267,20 +267,31 @@
 	            <artifactId>maven-shade-plugin</artifactId>
 	            <version>3.2.4</version>
 	            <executions>
-	                <execution>
-	                    <phase>package</phase>
-	                    <goals>
-	                        <goal>shade</goal>
-	                    </goals>
-	                    <configuration>
-	                        <transformers>
-	                            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-	                                <mainClass>com.korea.cgv.EmbeddedTomcatServer</mainClass>
-	                            </transformer>
-	                        </transformers>
-	                    </configuration>
-	                </execution>
-	            </executions>
+			        <execution>
+			            <phase>package</phase>
+			            <goals>
+			                <goal>shade</goal>
+			            </goals>
+			            <configuration>
+			                <filters>
+			                    <filter>
+			                        <!-- 모든 아티팩트에 대해 서명 파일 제거 -->
+			                        <artifact>*:*</artifact>
+			                        <excludes>
+			                            <exclude>META-INF/*.SF</exclude>
+			                            <exclude>META-INF/*.DSA</exclude>
+			                            <exclude>META-INF/*.RSA</exclude>
+			                        </excludes>
+			                    </filter>
+			                </filters>
+			                <transformers>
+			                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+			                        <mainClass>com.korea.cgv.EmbeddedTomcatServer</mainClass>
+			                    </transformer>
+			                </transformers>
+			            </configuration>
+			        </execution>
+				</executions>
 	        </plugin>
         </plugins>
     </build>
