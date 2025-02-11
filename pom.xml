@@ -252,15 +252,21 @@
                 </configuration>
             </plugin>
             
-            <!-- Maven WAR Plugin -->
+            <!-- JAR 파일 내부의 manifest에 실행 시작점(Main-Class) 정보가 포함되어 있지 않기 때문에 발생합니다.
+즉, java -jar 명령어로 실행할 때 어떤 클래스의 main 메서드를 호출해야 하는지 알 수 없다는 의미입니다. -->
             <plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-war-plugin</artifactId>
-			    <version>3.2.0</version>
-			    <configuration>
-			    	<failOnMissingWebXml>false</failOnMissingWebXml>
-			    </configuration>
-            </plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-jar-plugin</artifactId>
+	            <version>3.2.2</version>
+	            <configuration>
+	                <archive>
+	                    <manifest>
+	                        <mainClass>com.korea.com.EmbeddedTomcatServer</mainClass>
+	                    </manifest>
+	                </archive>
+	            </configuration>
+	        </plugin>
+            
         </plugins>
     </build>
 </project>
