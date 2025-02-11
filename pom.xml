@@ -187,6 +187,30 @@
 		    <artifactId>maven-compiler-plugin</artifactId>
 		    <version>3.8.1</version>
 		</dependency>
+		
+		<!-- 클라우드서버 업로드 톰캣관련 의존성 주입 -->
+		
+	
+	    <!-- 내장 톰캣 의존성 -->
+	    <dependency>
+	        <groupId>org.apache.tomcat.embed</groupId>
+	        <artifactId>tomcat-embed-core</artifactId>
+	        <version>9.0.85</version>
+	    </dependency>
+	    
+	    <dependency>
+	        <groupId>org.apache.tomcat.embed</groupId>
+	        <artifactId>tomcat-embed-jasper</artifactId>
+	        <version>9.0.85</version>
+	    </dependency>
+	    
+	    <!-- JSTL (JSP 관련) -->
+	    <dependency>
+	        <groupId>javax.servlet</groupId>
+	        <artifactId>jstl</artifactId>
+	        <version>1.2</version>
+	    </dependency>
+		
 	</dependencies>
     <build>
     	<defaultGoal>install</defaultGoal>
