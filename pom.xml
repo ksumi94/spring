@@ -154,7 +154,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>4.0.1</version>
-			<scope>provided</scope>
+			<!--  <scope>provided</scope>-->
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -181,13 +181,13 @@
 		  <groupId>jboss.web</groupId>
 		  <artifactId>servlet-api</artifactId>
 		  <version>2.1.0.GA</version>
-		</dependency>-->
+		</dependency>
 		<dependency>
 		    <groupId>org.apache.maven.plugins</groupId>
 		    <artifactId>maven-compiler-plugin</artifactId>
 		    <version>3.8.1</version>
 		</dependency>
-		
+		-->
 		<!-- 클라우드서버 업로드 톰캣관련 의존성 주입 -->
 		
 	
@@ -203,13 +203,7 @@
 	        <artifactId>tomcat-embed-jasper</artifactId>
 	        <version>9.0.85</version>
 	    </dependency>
-	    
-	    <!-- JSTL (JSP 관련) -->
-	    <dependency>
-	        <groupId>javax.servlet</groupId>
-	        <artifactId>jstl</artifactId>
-	        <version>1.2</version>
-	    </dependency>
+
 		
 	</dependencies>
     <build>
@@ -243,15 +237,16 @@
                 </configuration>
             </plugin>
             
+            <!-- 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <configuration>
-                    <mainClass>org.test.int1.Main</mainClass>
+                    <mainClass>com.korea.cgv.EmbeddedTomcatServer</mainClass>
                 </configuration>
             </plugin>
-            
+             -->
             <!-- JAR 파일 내부의 manifest에 실행 시작점(Main-Class) 정보가 포함되어 있지 않기 때문에 발생합니다.
 즉, java -jar 명령어로 실행할 때 어떤 클래스의 main 메서드를 호출해야 하는지 알 수 없다는 의미입니다. -->
             <plugin>
@@ -266,7 +261,27 @@
 	                </archive>
 	            </configuration>
 	        </plugin>
-            
+            <!-- Maven Shade Plugin을 추가하여 fat jar 생성 -->
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-shade-plugin</artifactId>
+	            <version>3.2.4</version>
+	            <executions>
+	                <execution>
+	                    <phase>package</phase>
+	                    <goals>
+	                        <goal>shade</goal>
+	                    </goals>
+	                    <configuration>
+	                        <transformers>
+	                            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+	                                <mainClass>com.korea.cgv.EmbeddedTomcatServer</mainClass>
+	                            </transformer>
+	                        </transformers>
+	                    </configuration>
+	                </execution>
+	            </executions>
+	        </plugin>
         </plugins>
     </build>
 </project>
