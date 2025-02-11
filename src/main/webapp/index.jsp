@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>수미페이지!</title>
+<title>팀프로젝트</title>
+<meta http-equiv="refresh" content="0;url=<%= request.getContextPath() %>/movie_home" />
 </head>
 <body>
-	<h1>Welcome to My Application</h1>
+	
 </body>
 </html>
