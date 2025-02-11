@@ -30,7 +30,7 @@ public class HomeController {
 	
 	@RequestMapping(value = {"/"})
 	public String index() {
-		return Common.Board.VIEW_PATH+"index.jsp";
+		return "forward:/index.jsp";
 	}
 	
 	@RequestMapping("movie_chart")
