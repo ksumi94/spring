@@ -7,7 +7,12 @@ public class EmbeddedTomcatServer {
 	public static void main(String[] args) throws Exception {
         // 톰캣 인스턴스 생성 및 포트 설정
 		Tomcat tomcat = new Tomcat();
-        tomcat.setPort(8080);
+        //tomcat.setPort(8080);
+		String port = System.getenv("PORT");
+		if (port == null || port.isEmpty()) {
+		    port = "8080";  // 기본값
+		}
+		tomcat.setPort(Integer.parseInt(port));
 
         // 웹 애플리케이션 루트 경로 설정
         String webappDirLocation = "src/main/webapp/"; // 실제 webapp 폴더 경로
@@ -17,9 +22,11 @@ public class EmbeddedTomcatServer {
         }
 
         // 톰캣에 웹 애플리케이션 추가 (컨텍스트 루트: "")
-        Context context = tomcat.addWebapp("", webContentFolder.getAbsolutePath());
-        System.out.println("Configuring app with basedir: " + webContentFolder.getAbsolutePath());
-
+        //Context context = tomcat.addWebapp("", webContentFolder.getAbsolutePath());
+        //System.out.println("Configuring app with basedir: " + webContentFolder.getAbsolutePath());
+        String webappDirLocation1 = "src/main/webapp/";
+        Context context = tomcat.addWebapp("", new File(webappDirLocation1).getAbsolutePath());
+        System.out.println("Configuring app with basedir: " + new File(webappDirLocation1).getAbsolutePath());
         // (선택 사항) JSP 컴파일을 위한 설정 추가
         // context.addParameter("org.apache.jasper.compiler.disablejsr199", "false");
 
