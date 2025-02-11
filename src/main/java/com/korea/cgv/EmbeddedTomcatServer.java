@@ -20,7 +20,7 @@ public class EmbeddedTomcatServer {
             throw new RuntimeException("Webapp folder not found: " + webContentFolder.getAbsolutePath());
         }
 
-        Context context = tomcat.addWebapp("", webContentFolder.getAbsolutePath());
+        Context context = tomcat.addWebapp("/cgv", webContentFolder.getAbsolutePath());
         System.out.println("Configuring app with basedir: " + webContentFolder.getAbsolutePath());
 
         // Connector의 바인딩 주소를 0.0.0.0으로 설정하여 외부 접속 허용
