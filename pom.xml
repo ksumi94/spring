@@ -261,7 +261,7 @@
 	            <configuration>
 	                <archive>
 	                    <manifest>
-	                        <mainClass>com.korea.com.EmbeddedTomcatServer</mainClass>
+	                        <mainClass>com.korea.cgv.EmbeddedTomcatServer</mainClass>
 	                    </manifest>
 	                </archive>
 	            </configuration>
