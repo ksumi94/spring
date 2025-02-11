@@ -23,16 +23,16 @@ public class HomeController {
 	HttpServletRequest request;
 	
 	
-	@RequestMapping(value = {"/", "movie_home"})
+	@RequestMapping(value = {"movie_home"})
 	public String movie_home() {
 		return Common.Board.VIEW_PATH+"movie_home.jsp";
 	}
-	/*
-	@RequestMapping(value = {"/", "movie_home"})
-	public String movie_home() {
-		return "movie_home.jsp";
+	
+	@RequestMapping(value = {"/"})
+	public String index() {
+		return "index.jsp";
 	}
-	*/
+	
 	@RequestMapping("movie_chart")
 	public String movie_chart() {
 		return Common.Board.VIEW_PATH+"movie_chart.jsp";
